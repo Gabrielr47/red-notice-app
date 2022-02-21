@@ -1,6 +1,25 @@
-# RedNoticeApp
+# Red Notice App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+
+
+Objectives:
+
+Have a website capable of searching for wanted people, this website should contain pagination and search filters.
+
+Tech Stack
+https://angular.io/
+https://open-props.style/
+https://ngrx.io/
+
+
+Api to be consumed
+
+https://interpol.api.bund.dev/
+
+Page to be based on
+
+https://www.interpol.int/en/How-we-work/Notices/View-Red-Notices
 
 ## Development server
 
