@@ -1,0 +1,7 @@
+<section class="list" *ngIf="(redNoticeList$ | async) as red">
+  <section class="card" *ngFor="let notice of red.notices">
+    <b>{{ notice.name }}</b>
+    <p>{{ notice.forename }}</p>
+    <p>{{ notice.date_of_birth }}</p>
+  </section>
+</section>
