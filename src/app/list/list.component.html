@@ -1,7 +1,10 @@
 <section class="list" *ngIf="(redNoticeList$ | async) as red">
-  <section class="card" *ngFor="let notice of red.notices">
-    <b>{{ notice.name }}</b>
-    <p>{{ notice.forename }}</p>
-    <p>{{ notice.date_of_birth }}</p>
+  <section class="card" *ngFor="let notice of red.notices" (click)="openProfile(notice)">
+    <img [src]="notice._links.thumbnail.href" alt="">
+    <div class="content">
+      <strong>{{ notice.name }}</strong>
+      <p>{{ notice.forename }}</p>
+      <small>Nationality: {{ notice.nationalities }}</small>
+    </div>
   </section>
 </section>

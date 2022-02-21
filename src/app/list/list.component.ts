@@ -13,9 +13,11 @@ export class ListComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getRedNotices().subscribe(data => {
-      console.log(data);
-    })
+    this.apiService.getRedNotices().subscribe(data => console.log(data))
+  }
+
+  openProfile(notice: any) {
+    console.log("notice", notice);
   }
 
 }
