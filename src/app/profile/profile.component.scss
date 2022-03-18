@@ -1,0 +1,28 @@
+.profile {
+  border-radius: var(--radius-2);
+  padding: var(--size-fluid-2);
+  box-shadow: var(--shadow-2);
+  border: var(--size-1) solid var(--surface-2);
+  animation-name: fadeIn;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  max-width: 600px;
+  margin-bottom: var(--size-3);
+
+  img {
+    width: 140px;
+    margin: var(--size-2);
+  }
+}
+
+button {
+  width: 160px;
+  padding: var(--size-3);
+  font-size: var(--font-size-3);
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-round);
+}
+
+.back {
+  background-color: var(--blue-8);
+}
