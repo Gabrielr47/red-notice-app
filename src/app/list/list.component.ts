@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
   redNoticeList$ = this.apiService.getRedNotices();
 
@@ -16,14 +16,7 @@ export class ListComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-    this.apiService.getRedNotices().subscribe(data => {
-      console.log(data);
-    });
-  }
-
   openProfile(notice: any) {
-    console.log("open profile here", notice);
     const id = notice.entity_id.replace('/', '-');
     this.router.navigate(['profile', id]);
   }

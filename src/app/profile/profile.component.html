@@ -1,6 +1,23 @@
 <app-header></app-header>
 <app-search></app-search>
+<div class="container-centered">
+  <section class="profile" *ngIf="redNotice$ | async as profile">
+    <div class="container-centered">
+      <img [src]="profile._links.thumbnail?.href" alt="">
+      <h3>{{ profile.name }}</h3>
+    </div>
+    <p>Arrest Warrant</p>
+    <ul>
+      <li *ngFor="let aw of profile.arrest_warrants">{{ aw.charge }}</li>
+    </ul>
+    <p>Details</p>
+    <ul>
+      <li>Date of Birth: {{ profile.date_of_birth }}</li>
+      <li>Country of Birth: {{ profile.country_of_birth_id }}</li>
+      <li>Place of Birth: {{ profile.place_of_birth }}</li>
+      <li>Nationality: {{ profile.nationalities }}</li>
+    </ul>
+  </section>
 
-<section class="profile">
-  <h3>Profile here</h3>
-</section>
+  <button class="back" routerLink="/">Back</button>
+</div>

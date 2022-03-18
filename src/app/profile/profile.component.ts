@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { ApiService } from '../api.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+
+  redNotice$!: Observable<any>;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,6 +21,7 @@ export class ProfileComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id') || '';
 
+      this.redNotice$ = this.apiService.getRedNoticeProfile(id);
       this.apiService.getRedNoticeProfile(id).subscribe(data => {
         console.log(data);
       });
