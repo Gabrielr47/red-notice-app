@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "b" : "ng build --output-path docs --base-href /red-notice-app/"
+    "gp-build" : "ng build --output-path docs --base-href /red-notice-app/"
   },
   "private": true,
   "dependencies": {
